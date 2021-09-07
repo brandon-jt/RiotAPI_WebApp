@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<body>
+<!---
+Try to figure out a loop or a way to do this in view.py, I don't think its possible to add an index to the end of item+i
+-->
+
+<div class="boxx">
+    <h1> Champ Items</h1>
+    {% if item0 != '\\media\\item\\0.png' %}
+<img src="{{item0}}" width="64" height="64" title="{{name0}}" href ="{%static 'App/style.css' %}">
+    {% endif %}
+    {% if item1 != '\\media\\item\\0.png' %}
+<img src="{{item1}}" width="64" height="64" title="{{name1}}">
+    {% endif %}
+    {% if item2 != '\\media\\item\\0.png' %}
+<img src="{{item2}}" width="64" height="64" title="{{name2}}">
+    {% endif %}
+    {% if item3 != '\\media\\item\\0.png' %}
+<img src="{{item3}}" width="64" height="64" title="{{name3}}">
+    {% endif %}
+    {% if item4 != '\\media\\item\\0.png' %}
+<img src="{{item4}}" width="64" height="64" title="{{name4}}">
+    {% endif %}
+{% if item5 != '\\media\\item\\0.png' %}
+<img src="{{item5}}" width="64" height="64" title="{{name5}}"> <br>
+{% endif %}
+<h1>Champ Runes</h1>
+<img src ="{{iperkPrimaryStyle}}" width="64" height="64" title="{{perkPrimaryStyle}}">
+<img src ="{{irune0}}" width="64" height="64" title="{{rune0}}">
+<img src ="{{irune1}}" width="64" height="64" title="{{rune1}}">
+<img src ="{{irune2}}" width="64" height="64" title="{{rune2}}">
+<img src ="{{irune3}}" width="64" height="64" title="{{rune3}}"><br>
+<img src ="{{iperkSubStyle}}" width="64" height="64" title="{{perkSubStyle}}">
+<img src ="{{irune4}}" width="64" height="64" title="{{rune4}}">
+<img src ="{{irune5}}" width="64" height="64" title="{{rune5}}"><br>
+
+<form>
+    <input type="button" value="Back" onclick="history.back()">
+</form>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="{% static '\App\style.css' %}">
+</body>
+</form>
+</html>

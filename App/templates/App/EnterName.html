@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <div class="header">  
+        <h1> Riot API WebApp </h1>
+    </div>   
+    <div class ="boxx">
+    <body>
+        <p>Enter name of Champion to retrieve item build</p>
+        
+        <form action="/App/Begin">
+            <input type = "text" name = "name" id="name"> <br>
+            <br><input type = "submit" value = "Submit">
+
+            {% if nonValidChamp == True %}
+            <p>Please enter a valid champion name</p>
+            {% endif %}
+            
+        </form>
+    </body>
+    </div>
+<link rel="stylesheet" type="text/css" href="{% static '\App\style.css' %}">
+</html>
