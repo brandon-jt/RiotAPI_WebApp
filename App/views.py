@@ -25,9 +25,8 @@ def EnterName(request):
 def createConnection():
     """ Creates the connection to the database using the credentials from the .ini file, returns connector """
     config = configparser.ConfigParser()    # Config parser to get the Database data and API Key from the ini file
-    # config.read('/Users/brandonturner/PycharmProjects/AWSRiotAPI/App/dev.ini')
-    # config.read('/PycharmProjects/AWSRiotAPI/App/dev.ini')
-    config.read('C:\\Users\\brandon.turner\\PycharmProjects\\AWSRiotAPI\\App\\dev.ini')
+   
+    config.read('\\App\\dev.ini')
     return mysql.connector.connect(user=config['DEFAULT'].get('user'),
                                    password=config['DEFAULT'].get('password'),
                                    host=config['DEFAULT'].get('host'),
